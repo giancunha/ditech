@@ -1,0 +1,21 @@
+OK - Criar repositório no github.com
+OK - Criar Demanda
+
+#################### Primeira Etapa ####################
+Gestão usuários (id, nome, email, senha)
+Gestão salas (id, sala, descrição)
+Sistema de login
+Estrutura HTML
+Reserva de salas
+Visualização de todas salas e os horários vagos e ocupados
+Usuário pode reservar apenas uma sala por horário
+Sala não pode estar reservada por mais de um usuário no mesmo horário
+As reservas tem duração de 1h
+Somente usuário que efetuou reserva pode remover a reserva
+
+
+#################### Segunda Etapa ####################
+Instalar Workbench
+connectar-se na BD teste da ditech
+Com base no diagrama ER, desenvolver uma queryque retornoe os 10 funcionários que mais tempo permaneceram dentro de um determinado departamento e apresentar o resultado ordenado por dias trabalhados decrescente, exibindo Nome Departamento, Nome Funcionário e dias trabalhados no departamento.
+Inserir query como "etapa2.sql" no repositório da primeira etapa.
