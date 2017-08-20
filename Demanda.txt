@@ -1,7 +1,6 @@
-OK - Gestão usuários (id, nome, email, senha)
+OK - Gestão salas (id, sala, descrição)
 
 #################### Primeira Etapa ####################
-Gestão salas (id, sala, descrição)
 Reserva de salas
 Visualização de todas salas e os horários vagos e ocupados
 Usuário pode reservar apenas uma sala por horário

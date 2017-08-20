@@ -16,6 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `sala`
+--
+
+DROP TABLE IF EXISTS `sala`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sala` (
+  `idSala` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idSala`),
+  UNIQUE KEY `Nome_UNIQUE` (`nome`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sala`
+--
+
+LOCK TABLES `sala` WRITE;
+/*!40000 ALTER TABLE `sala` DISABLE KEYS */;
+INSERT INTO `sala` VALUES (1,'Sala 101','Primeira sla térreo'),(3,'Sala 102','Segunda sala do térreo');
+/*!40000 ALTER TABLE `sala` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `usuario`
 --
 
@@ -29,7 +55,7 @@ CREATE TABLE `usuario` (
   `senha` varchar(50) NOT NULL,
   PRIMARY KEY (`idUsuario`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +64,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'Giancarlo','wgaweb@gmail.com','615368ac95ef708ef2c5d454a747acdb');
+INSERT INTO `usuario` VALUES (1,'Giancarlo Cunha','wgaweb@gmail.com','615368ac95ef708ef2c5d454a747acdb'),(6,'Michele Rosa','michele@ditech.com.br','615368ac95ef708ef2c5d454a747acdb');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +77,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-20 12:39:05
+-- Dump completed on 2017-08-20 17:48:48

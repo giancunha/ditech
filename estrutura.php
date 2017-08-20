@@ -23,6 +23,13 @@
             <div class="menu">
                 <ul>
                     <li>
+                        <a href="<?php echo URL; ?>/salas">Salas</a>
+                        <ul>
+                            <li><a href="<?php echo URL; ?>/salas/cadastrar">Cadastrar</a></li>
+                            <li><a href="<?php echo URL; ?>/salas">Visualizar</a></li>
+                        </ul>
+                    </li>
+                    <li>
                         <a href="<?php echo URL; ?>/usuarios">Usuários</a>
                         <ul>
                             <li><a href="<?php echo URL; ?>/usuarios/cadastrar">Cadastrar</a></li>

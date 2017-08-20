@@ -1,5 +1,4 @@
 <?php
-  $usuario = unserialize($_SESSION['usuario_adm_'.SESSAOADM]);
   $usuario = new Usuario();
   $usuario->setidUsuario($gets['2']);
   $usuario->seleciona();
