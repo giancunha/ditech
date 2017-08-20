@@ -46,6 +46,22 @@ function printR($dado){
 	echo "</pre>";
 }
 
+//FUNÇÕES DATAS
+function dataToBase($data){
+	return implode('-',array_reverse(explode('/',$data)));
+}
+
+function timeStamptoData($data, $tipo){
+	if($tipo == 'data'){
+		$data = date('d/m/Y',strtotime($data));
+	} else if($tipo == 'hora'){
+		$data = date('H:i',strtotime($data));
+	} else {
+		$data = date('d/m/Y H:i',strtotime($data));
+	}
+	return $data;
+}
+
 //FUNÇÕES URL
 //PEGA URL AMIGÁVEL
 function getUrlAmigavel($origem = URL) {

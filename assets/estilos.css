@@ -48,7 +48,7 @@ input[type=date], input[type=text], input[type=password], select, textarea {
 	color: #333333;
 	background-color:#FFFFFF;
 }
-input[type=date], input[type=text]:focus, input[type=password], select, textarea {
+input[type=date]:focus, input[type=text]:focus, input[type=password]:focus, select:focus, textarea:focus {
 	color: #000000;
 	background-color:#FFF8DC;
 }
@@ -86,11 +86,14 @@ th {
 	text-transform: uppercase;
 	height: 20px;
 }
+td{
+	padding: 4px;
+}
 tr:nth-child(even){
-	background-color: #FFFFFF;
+	background-color: #EEEEEE;
 }
 tr:nth-child(odd){
-	background-color: #EEEEEE;
+	background-color: #FFFFFF;
 }
 
 /* FIM PADRÕES DO SITE TAGS */
