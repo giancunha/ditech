@@ -1,7 +1,6 @@
 <h1>Cadastra Usuário</h1>
 <div>
   <form action="<?php echo URL."/".$gets[0].'/salva'.ucfirst($gets[0]); ?>" method="post" id="formulario">
-      <input type="hidden" name="idUsuario" />
       <div>
           <label>Nome</label>
           <input type="text" name="nome" maxlength="100" required />

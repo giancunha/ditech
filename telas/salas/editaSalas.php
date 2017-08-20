@@ -14,7 +14,7 @@
         </div>
         <div>
             <label>Descrição</label>
-            <input type="text" name="descricao" maxlength="100" required value="<?php echo $sala->getDescricao(); ?>" />
+            <input type="text" name="descricao" maxlength="100" value="<?php echo $sala->getDescricao(); ?>" />
         </div>
         <div>
             <button type="submit">Atualizar</button>

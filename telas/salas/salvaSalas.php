@@ -1,11 +1,8 @@
 <?php
-if($_POST['nome'] == '' or $_POST['descricao'] == ''){
+if($_POST['nome'] == ''){
     $aviso = "Campo(s) obrigatório(s):";
     if ($_POST['nome'] == ''){
         $aviso .= "\\n- Nome"; 
-    }
-    if ($_POST['descricao'] == ''){
-        $aviso .= "\\n- E-mail"; 
     }
     echo exibeAlerta($aviso, "voltar");
     exit();
