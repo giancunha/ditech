@@ -36,6 +36,10 @@ function exibeAlerta($recado, $redirecionamento=null){
 	return $alerta;
 }
 
+function exibeId($id, $numCaracteres = 5){
+	return str_pad($id,$numCaracteres,'0',STR_PAD_LEFT);	
+}
+
 function printR($dado){
 	echo "<pre>";
 	print_r($dado);
@@ -43,7 +47,7 @@ function printR($dado){
 }
 
 //FUNÇÕES URL
-// Pegar as url amigavel 
+//PEGA URL AMIGÁVEL
 function getUrlAmigavel($origem = URL) {
 	$actual_link = PROTOCOLO . "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 	$actual_link = str_replace($origem."/","",$actual_link);
@@ -56,18 +60,16 @@ function getUrlAmigavel($origem = URL) {
 	return $gets;
 }
 $gets = getUrlAmigavel();
-
-//URL AMIGÁVEL
 function mostrapaginas() {
 	$gets = getUrlAmigavel();
 	if(isset($gets[0]) and $gets[0] != ''){
 		if(file_exists("telas/".$gets[0]) and $gets[0] != ''){
-			if(isset($gets[2])){
-				if(file_exists("telas/".$gets[0]."/".$gets[1]."/".$gets[2].".php")){
-					require_once ("telas/".$gets[0]."/".$gets[1]."/".$gets[2].".php");
+			if(isset($gets[1])){
+				if(file_exists("telas/".$gets[0]."/".$gets[1].".php")){
+					require_once ("telas/".$gets[0]."/".$gets[1].".php");
 				}
 			} else {
-				require_once ("telas/".$gets[0]."/".$gets[1]."/visualizar.php");
+				require_once ("telas/".$gets[0]."//capa.php");
 			}	
 		}
 	} else {
