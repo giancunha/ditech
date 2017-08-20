@@ -1,11 +1,9 @@
-OK - Criar repositório no github.com
-OK - Criar Demanda
+OK - Sistema de login
+OK - Estrutura básica HTML
 
 #################### Primeira Etapa ####################
 Gestão usuários (id, nome, email, senha)
 Gestão salas (id, sala, descrição)
-Sistema de login
-Estrutura HTML
 Reserva de salas
 Visualização de todas salas e os horários vagos e ocupados
 Usuário pode reservar apenas uma sala por horário
