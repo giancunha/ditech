@@ -1,8 +1,6 @@
-OK - Sistema de login
-OK - Estrutura básica HTML
+OK - Gestão usuários (id, nome, email, senha)
 
 #################### Primeira Etapa ####################
-Gestão usuários (id, nome, email, senha)
 Gestão salas (id, sala, descrição)
 Reserva de salas
 Visualização de todas salas e os horários vagos e ocupados
@@ -10,7 +8,6 @@ Usuário pode reservar apenas uma sala por horário
 Sala não pode estar reservada por mais de um usuário no mesmo horário
 As reservas tem duração de 1h
 Somente usuário que efetuou reserva pode remover a reserva
-
 
 #################### Segunda Etapa ####################
 Instalar Workbench

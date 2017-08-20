@@ -46,7 +46,11 @@ input, select {
 input[type=date], input[type=text], input[type=password], select, textarea {
 	border: #CCCCCC 1px solid;
 	color: #333333;
-	background-color:#FFFFCC;
+	background-color:#FFFFFF;
+}
+input[type=date], input[type=text]:focus, input[type=password], select, textarea {
+	color: #000000;
+	background-color:#FFF8DC;
 }
 input[type=button], input[type=submit], input[type=reset], input[type=file]{
 	border: #C00 1px solid;
@@ -67,9 +71,28 @@ span.direita {
 span.centro {
 	text-align: center;
 }
+
 table{
-	font-size: 12px;	
+	font-size: 12px;
+	min-width: 50%;
+	border-spacing: 0;
+	border-collapse: collapse;
 }
+th {
+	color:#FFFFFF;
+	background:#777777;
+	padding: 4px;
+	font-weight: bold;
+	text-transform: uppercase;
+	height: 20px;
+}
+tr:nth-child(even){
+	background-color: #FFFFFF;
+}
+tr:nth-child(odd){
+	background-color: #EEEEEE;
+}
+
 /* FIM PADRÕES DO SITE TAGS */
 
 /* ÍNICIO PADRÕES DO SITE CLASSES */
@@ -155,21 +178,6 @@ table{
 	clear:left;
 }	
 /* FIM PADRÕES DO SITE CLASSES */
-tr:nth-child(even){
-	background-color: #FFFFFF;
-}
-tr:nth-child(odd){
-	background-color: #EEEEEE;
-}
-
-th {
-	color:#FFFFFF;
-	background:#666666;
-	padding:5px;
-	font-weight:bold;
-	text-transform:uppercase;
-	height: 25px;
-}
 ::selection{
   color: white;
   background-color: red;

@@ -41,7 +41,7 @@
         </div>
         <!-- FIM CONTEÚDO -->
         <!-- htmlbuild:js -->
-        <script src="adm/assets/Scripts.js"></script>
+        <script src="<?php echo URL; ?>/assets/scripts.js"></script>
         <!-- endbuild -->
         <!-- RODAPÉ -->
         <div id="rodape">
