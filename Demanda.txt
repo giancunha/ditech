@@ -1,7 +1,6 @@
-OK - Somente usuário que efetuou reserva pode remover a reserva
+OK - BD - FKs
 
 #################### Primeira Etapa ####################
-BD - FKs
 Usuários - Pemitir exclusão
 Salas - Permitir exclusão
 
