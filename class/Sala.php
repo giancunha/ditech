@@ -100,7 +100,7 @@ class Sala{
 
 	public function selecionaSala(){
 		$bd = new BdSQL;
-		$seleciona = "SELECT *
+		$seleciona = "SELECT idSala
 					    FROM Sala
 					   WHERE nome = '" . $this->nome . "'";
 		$resultado = $bd->consulta($seleciona);
