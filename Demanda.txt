@@ -1,7 +1,6 @@
-OK - BD - FKs
+OK - Usuários - Pemitir exclusão
 
 #################### Primeira Etapa ####################
-Usuários - Pemitir exclusão
 Salas - Permitir exclusão
 
 #################### Segunda Etapa ####################

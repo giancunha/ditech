@@ -32,6 +32,20 @@ class Usuario{
 		}		
 	}
 
+	public function exclui(){
+		$exclui = "DELETE FROM Usuario WHERE idUsuario = ?";
+		$bd = new BdSQL;	
+		$dados = array(
+					array('1'=>$this->idUsuario)
+				);
+		$result = $bd->deleta($exclui, $dados);
+		if($result=='ok'){
+			return true;
+		}else{
+			return false;
+		}	
+	}
+
 	public function insere(){
 		$insere = "INSERT INTO Usuario (
 				nome,
