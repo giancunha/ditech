@@ -13,8 +13,9 @@ if($_POST['data'] == '' or $_POST['sala'] == '' or $_POST['hora'] == ''){
     echo exibeAlerta($aviso, "voltar");
     exit();
 }
-
+$usuario = unserialize($_SESSION['usuario_adm_'.SESSAOADM]);
 $idReserva = $_POST['idReserva'];
+$idUsuario = $usuario->getIdUsuario();
 $data = $_POST['data'];
 $idSala = $_POST['sala'];
 $hora = $_POST['hora'];
@@ -24,10 +25,17 @@ $horaFim = dataToBase($data) . " " . exibeId($hora+1,2) . ":00:00";
 
 $reserva = new Reserva;
 $reserva->setIdReserva( $idReserva );
+$reserva->setIdUsuario( $idUsuario );
 $reserva->setIdSala( $idSala );
 $reserva->setHoraInicio( $horaInicio );
 $reserva->setHoraFim( $horaFim );
 $reserva->setDescricao( $descricao );
+
+//Verifica se usuário já efetuou reserva no mesmo horário
+if($reserva->selecionaPorUsuario( $idReserva )){
+    echo exibeAlerta("Você já possui reserva em $data das " . exibeId($hora,2) . " às " . exibeId($hora+1,2) . "!\\nFavor informe outro horário.", "voltar");
+    exit();
+}
 
 $altera = $reserva->altera();
 if( $altera > 0 ){

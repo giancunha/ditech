@@ -116,7 +116,6 @@ class Sala{
 		}
 	}
 
-
 	//GETTERS E SETTERS
 	public function getIdSala(){
 		return $this->idSala;

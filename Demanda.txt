@@ -1,7 +1,6 @@
-OK - Visualização de todas salas e os horários vagos e ocupados
+OK - Usuário pode reservar apenas uma sala por horário
 
 #################### Primeira Etapa ####################
-Usuário pode reservar apenas uma sala por horário
 Sala não pode estar reservada por mais de um usuário no mesmo horário
 As reservas tem duração de 1h
 Somente usuário que efetuou reserva pode remover a reserva

@@ -29,6 +29,12 @@ $reserva->setHoraInicio( $horaInicio );
 $reserva->setHoraFim( $horaFim );
 $reserva->setDescricao( $descricao );
 
+//Verifica se usuário já efetuou reserva no mesmo horário
+if($reserva->selecionaPorUsuario( )){
+    echo exibeAlerta("Você já possui reserva em $data das " . exibeId($hora,2) . " às " . exibeId($hora+1,2) . "!\\nFavor informe outro horário.", "voltar");
+    exit();
+}
+
 $insere = $reserva->insere();
 if( $insere > 0 ){
     echo exibeAlerta('Cadastro efetuado com sucesso!', URL.'/'.$gets['0']);
