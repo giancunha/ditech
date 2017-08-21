@@ -19,7 +19,6 @@ class BdSQL{
 			);
 			return $bd;
 		}catch(PDOException $e){
-			//printR($e->getMessage());
 			echo "ERRO ao conectar ao banco<br>".$e->getMessage(); die();
 		}
 	}
@@ -69,7 +68,32 @@ class BdSQL{
 		}
 		$banco = null;
 	}
-	
+
+	//deleta os dados conforme parâmentro query
+	public function deleta( $query, $dados ){
+		try {
+			$banco = $this->conecta();
+			$statement = $banco->prepare($query);
+			for($i=0;$i<count($dados);$i++){
+				foreach($dados[$i] as $chave => $valor){
+					$statement->bindValue($chave, $valor);
+				}
+				$statement->execute();
+				if(!$statement->execute()){
+					$erro = $statement->errorInfo();
+					if($erro[2]){
+						printR($erro);
+						throw new Exception($erro[2]);
+					}
+				}
+			}
+			return "ok";
+		}catch(Exception $e){
+			return $e->getMessage();
+		}
+		$banco = null;
+	}
+		
 	// insere os dados conforme parâmetro query e a quantidade de dados(array) informados
 	public function insereRetornaId( $query, $dados ){
 		try {

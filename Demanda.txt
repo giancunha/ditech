@@ -1,9 +1,9 @@
-OK - As reservas tem duração de 1h
-OK - Instalar Workbench
-OK - Sala não pode estar reservada por mais de um usuário no mesmo horário
+OK - Somente usuário que efetuou reserva pode remover a reserva
 
 #################### Primeira Etapa ####################
-Somente usuário que efetuou reserva pode remover a reserva
+BD - FKs
+Usuários - Pemitir exclusão
+Salas - Permitir exclusão
 
 #################### Segunda Etapa ####################
 connectar-se na BD teste da ditech

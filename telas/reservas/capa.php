@@ -4,6 +4,8 @@
     } else {
         $data = $_POST['data'];
     }
+    $usuario = unserialize($_SESSION['usuario_adm_'.SESSAOADM]);
+    $idUsuario = $usuario->getIdUsuario();
 ?>
 <h1>Reservas - <?php echo $data; ?></h1>
 <form action="" method="POST">
@@ -24,7 +26,7 @@ foreach($resultado as $chave => $valor){
                 <th>Horário</th>
                 <th>Responsável</th>
                 <th>Descrição</th>
-                <th>&nbsp;</th>
+                <th colspan="2">&nbsp;</th>
             </tr>
         </thead>
         <tfoot>
@@ -34,7 +36,7 @@ foreach($resultado as $chave => $valor){
         </tfoot>
         <tbody>
     <?php
-        for ($i=7; $i < 18; $i++) { 
+        for ($i=8; $i < 18; $i++) { 
             $horaInicio = exibeId($i,2).':00';
             $horaFim = exibeId($i+1,2).':00';
             ?>
@@ -51,10 +53,23 @@ foreach($resultado as $chave => $valor){
                 <!--td><?php echo timeStamptoData($valor2->getHoraInicio(),'data'); ?></td-->
                 <td><?php echo $usuario->getNome(); ?></td>
                 <td><?php echo $valor2->getDescricao(); ?></td>
+                <?php
+                    if($idUsuario == $valor2->getIdUsuario()){
+                ?>
                 <td style="text-align:right">
                     <a href="<?php echo URL."/".$gets[0]."/edita".ucfirst($gets[0]); ?>/<?php echo $valor2->getIdReserva(); ?>">Editar</a>
                 </td>
+                <td style="text-align:right">
+                    <a href="<?php echo URL."/".$gets[0]."/exclui".ucfirst($gets[0]); ?>/<?php echo $valor2->getIdReserva(); ?>" onclick="return duvida('Realmente deseja excluir essa reserva?');">Excluir</a>
+                </td>
                 <?php
+                    } else {
+                ?>
+                <td colspan="2">
+                    &nbsp;
+                </td>
+                <?php
+                    }
                 }
                 ?>
             <?php

@@ -5,6 +5,13 @@
   $sala = new Sala();
   $sala->setIdSala($reserva->getIdSala());
   $sala->seleciona();
+  //VERIFICA SE USUÁRIO LOGADO É PROPRIETÁRIO DA RESERVA
+  $usuario = unserialize($_SESSION['usuario_adm_'.SESSAOADM]);
+  $idUsuario = $usuario->getIdUsuario();
+  if($idUsuario != $reserva->getIdUsuario()){
+    echo exibeAlerta("Você não tem permissão para acessar essa reserva!", "voltar");
+    exit();
+  }
 ?>
 <h1>Edita Reserva - <?php echo $sala->getNome(); ?> - <?php echo timeStamptoData($reserva->getHoraInicio(),'hora'); ?> - <?php echo timeStamptoData($reserva->getHoraFim(),'hora'); ?></h1>
 <div>
