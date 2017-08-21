@@ -1,4 +1,5 @@
-OK - Salas - Permitir exclusão
+OK - Reservas - Inserir indice salas para facilitar navegação
+OK - Salas - Informar horário de disponibilidade
 
 #################### Segunda Etapa ####################
 connectar-se na BD teste da ditech
@@ -7,5 +8,3 @@ Inserir query como "etapa2.sql" no repositório da primeira etapa.
 
 #################### Extras ####################
 Reservas - Mascára data
-Salas - Informar horário de disponibilidade
-Reservas - Inserir indice salas para facilitar navegação

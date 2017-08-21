@@ -34,7 +34,7 @@ CREATE TABLE `reserva` (
   KEY `idSala_idx` (`idSala`),
   CONSTRAINT `idSala` FOREIGN KEY (`idSala`) REFERENCES `sala` (`idSala`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `idUsuario` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`idUsuario`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `reserva` (
 
 LOCK TABLES `reserva` WRITE;
 /*!40000 ALTER TABLE `reserva` DISABLE KEYS */;
-INSERT INTO `reserva` VALUES (1,1,1,'2017-08-20 08:00:00','2017-08-20 09:00:00','Reunião Administrativa'),(2,1,1,'2017-08-21 16:00:00','2017-08-21 17:00:00','Reunião Conselho'),(3,1,3,'2017-08-21 15:00:00','2017-08-21 16:00:00','Teste Conflito Horário'),(5,6,3,'2017-08-22 11:00:00','2017-08-22 12:00:00','Reunião Gerente'),(6,6,3,'2017-08-21 11:00:00','2017-08-21 12:00:00','Reunião Candidato'),(7,6,4,'2017-08-21 14:00:00','2017-08-21 15:00:00','Teste exclusão Sala'),(8,6,4,'2017-08-21 13:00:00','2017-08-21 14:00:00','');
+INSERT INTO `reserva` VALUES (1,1,1,'2017-08-20 08:00:00','2017-08-20 09:00:00','Reunião Administrativa'),(2,1,1,'2017-08-21 16:00:00','2017-08-21 17:00:00','Reunião Conselho'),(3,1,3,'2017-08-21 15:00:00','2017-08-21 16:00:00','Teste Conflito Horário'),(5,6,3,'2017-08-22 11:00:00','2017-08-22 12:00:00','Reunião Gerente'),(6,6,3,'2017-08-21 11:00:00','2017-08-21 12:00:00','Reunião Candidato');
 /*!40000 ALTER TABLE `reserva` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +60,7 @@ CREATE TABLE `sala` (
   `descricao` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idSala`),
   UNIQUE KEY `Nome_UNIQUE` (`nome`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `sala` (
 
 LOCK TABLES `sala` WRITE;
 /*!40000 ALTER TABLE `sala` DISABLE KEYS */;
-INSERT INTO `sala` VALUES (1,'Sala 101','Primeira sala térreo'),(3,'Sala 102','Segunda sala do térreo'),(4,'Teste Exclusão','Criada para testar remoção das reservas ao excluir');
+INSERT INTO `sala` VALUES (1,'Sala 101','Primeira sala térreo'),(3,'Sala 102','Segunda sala do térreo'),(5,'Sala 103','Terceira sala');
 /*!40000 ALTER TABLE `sala` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,7 +96,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'Giancarlo','wgaweb@gmail.com','615368ac95ef708ef2c5d454a747acdb'),(6,'Michele Rosa','michele@ditech.com.br','615368ac95ef708ef2c5d454a747acdb'),(7,'Gian','gian','353f7b4a30c4c82935b1492c59358db3'),(8,'J','j','89b3dcb5cce6abc9d6e6d1e5c1c5f49d');
+INSERT INTO `usuario` VALUES (1,'Giancarlo','wgaweb@gmail.com','615368ac95ef708ef2c5d454a747acdb'),(6,'Michele Rosa','michele@ditech.com.br','615368ac95ef708ef2c5d454a747acdb');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -109,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-20 22:21:36
+-- Dump completed on 2017-08-20 22:59:45

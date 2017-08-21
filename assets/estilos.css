@@ -177,7 +177,8 @@ tr:nth-child(odd){
 	clear:left;
 }	
 /* FIM PADRÕES DO SITE CLASSES */
-::selection{
-  color: white;
-  background-color: red;
+.indice a{
+	font-size: 10px;
+	text-decoration: none;
+	color: #0000FF;
 }

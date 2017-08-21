@@ -11,11 +11,18 @@
 <form action="" method="POST">
     <input type="input" name="data" maxlength="10" placeholder="dd/mm/aaaa" value="<?php echo $data; ?>" required />
     <button type="submit">Filtrar</button>
-</form>
+    </form>
 <?php
+$resultado = Sala::listaPrincipal( );
+$espacamento = $indiceSalas = NULL;
+foreach($resultado as $chave => $valor){
+    $indiceSalas .= $espacamento . "<a href='#sala" . exibeId($valor->getIdSala(), 2) . "'>" . $valor->getNome() . "</a>";
+    $espacamento = " - ";
+}
 $resultado = Sala::listaPrincipal( );
 foreach($resultado as $chave => $valor){
 ?>
+<a name="sala<?php echo exibeId($valor->getIdSala(), 2); ?>"></a>
 <h2><?php echo $valor->getNome(); ?></h2>
 <sup><?php echo $valor->getDescricao(); ?></sup>
 <div class="table-responsive">
@@ -85,6 +92,9 @@ foreach($resultado as $chave => $valor){
      ?>
         </tbody>
     </table>
+    <div class="indice">
+        <?php echo $indiceSalas; ?>
+    </div>
     <br />
 </div>
 <?php
