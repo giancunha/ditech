@@ -14,13 +14,11 @@ if($_POST['nome'] == '' or $_POST['email'] == '' or $_POST['senha'] == ''){
     exit();
 }
 
-$idUsuario = $_POST['idUsuario'];
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
 $usuario = new Usuario;
-$usuario->setIdUsuario( $idUsuario );
 $usuario->setNome( $nome );
 $usuario->setEmail( $email );
 $usuario->setSenha( $senha );

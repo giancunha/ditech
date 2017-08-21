@@ -8,12 +8,10 @@ if($_POST['nome'] == ''){
     exit();
 }
 
-$idSala = $_POST['idSala'];
 $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
 
 $sala = new Sala;
-$sala->setIdSala( $idSala );
 $sala->setNome( $nome );
 $sala->setDescricao( $descricao );
 
