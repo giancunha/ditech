@@ -1,7 +1,4 @@
-OK - Usuários - Pemitir exclusão
-
-#################### Primeira Etapa ####################
-Salas - Permitir exclusão
+OK - Salas - Permitir exclusão
 
 #################### Segunda Etapa ####################
 connectar-se na BD teste da ditech

@@ -31,6 +31,20 @@ class Sala{
 		}		
 	}
 
+	public function exclui(){
+		$exclui = "DELETE FROM Sala WHERE idSala = ?";
+		$bd = new BdSQL;	
+		$dados = array(
+					array('1'=>$this->idSala)
+				);
+		$result = $bd->deleta($exclui, $dados);
+		if($result=='ok'){
+			return true;
+		}else{
+			return false;
+		}	
+	}
+
 	public function insere(){
 		$insere = "INSERT INTO Sala (
 				nome,
