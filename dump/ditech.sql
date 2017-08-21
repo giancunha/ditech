@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `reserva`
+--
+
+DROP TABLE IF EXISTS `reserva`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `reserva` (
+  `idReserva` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `idUsuario` int(10) unsigned NOT NULL,
+  `idSala` int(10) unsigned NOT NULL,
+  `horaInicio` datetime NOT NULL,
+  `horaFim` datetime NOT NULL,
+  `descricao` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idReserva`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `reserva`
+--
+
+LOCK TABLES `reserva` WRITE;
+/*!40000 ALTER TABLE `reserva` DISABLE KEYS */;
+INSERT INTO `reserva` VALUES (1,1,1,'2017-08-20 08:00:00','2017-08-20 09:00:00','Reunião Administrativa'),(2,1,1,'2017-08-20 16:00:00','2017-08-20 17:00:00','Reunião Conselho');
+/*!40000 ALTER TABLE `reserva` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `sala`
 --
 
@@ -77,4 +105,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-20 17:48:48
+-- Dump completed on 2017-08-20 19:50:48

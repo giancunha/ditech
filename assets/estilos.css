@@ -27,11 +27,6 @@ div#rodape p a,  div#topo p a{
     color: #FFFFFF;
     font-weight: bold;
 }
-div#rodape {
-    position:absolute;
-    bottom:0;
-    width:100%;
-}
 .header {
 	height: 25px;
 	line-height:25px;
@@ -103,6 +98,7 @@ tr:nth-child(odd){
 	width:100%;
 	max-width: 1250px;
 	margin:0 auto;
+	padding-bottom: 10px;
 }
 .menu{
 	border:none;

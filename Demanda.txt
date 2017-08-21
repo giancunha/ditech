@@ -1,7 +1,6 @@
-OK - Reserva de salas
+OK - Visualização de todas salas e os horários vagos e ocupados
 
 #################### Primeira Etapa ####################
-Visualização de todas salas e os horários vagos e ocupados
 Usuário pode reservar apenas uma sala por horário
 Sala não pode estar reservada por mais de um usuário no mesmo horário
 As reservas tem duração de 1h
@@ -15,4 +14,5 @@ Inserir query como "etapa2.sql" no repositório da primeira etapa.
 
 #################### Extras ####################
 Reservas - Mascára data
-Reservas - Exibir por data
+Salas - Informar horário de disponibilidade
+Reservas - Inserir indice salas para facilitar navegação

@@ -26,6 +26,7 @@
                         <a href="<?php echo URL; ?>/reservas">Reservas</a>
                         <ul>
                             <li><a href="<?php echo URL; ?>/reservas/cadastrar">Cadastrar</a></li>
+                            <li><a href="<?php echo URL; ?>/reservas/todas">Todas</a></li>
                             <li><a href="<?php echo URL; ?>/reservas">Visualizar</a></li>
                         </ul>
                     </li>

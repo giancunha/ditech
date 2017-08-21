@@ -68,10 +68,35 @@ class Reserva{
 
 	public static function listaPrincipal( ){
 		$bd = new BdSQL;
-		$consulta = "
-			SELECT * 
-			  FROM Reserva
-		  ORDER BY horaInicio
+		$consulta = "SELECT * 
+			  		  FROM Reserva
+				  ORDER BY horaInicio
+		";
+		$resultSet = $bd->consulta( $consulta );
+		$resultado = array();
+		$i = 0;
+		$totalResultados = count($resultSet);
+		for( $j=0; $j<$totalResultados; $j++ ){
+			$objeto = new Reserva;
+			foreach($resultSet[$j] as $chave=>$valor){		
+				if(!is_int($chave)){
+					$set = "set".ucfirst( $chave );
+					$objeto->$set( $valor );
+				}
+			}
+			$resultado[$i] = $objeto;
+			$i++;
+		}
+		return $resultado;
+	}
+
+	public static function listaPorHora( $hora, $idSala, $data ){
+		$bd = new BdSQL;
+		$consulta = "SELECT * 
+			  		  FROM Reserva
+					 WHERE idSala = '$idSala'
+					   AND horaInicio = '$data $hora:00'
+				  ORDER BY horaInicio
 		";
 		$resultSet = $bd->consulta( $consulta );
 		$resultado = array();
