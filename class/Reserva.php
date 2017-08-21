@@ -134,6 +134,29 @@ class Reserva{
 		}
 	}
 
+	public function selecionaPorSala( $idReserva = NULL ){
+		if(isset($idReserva)){
+			$idReserva = "AND idReserva != '$this->idReserva'";
+		}
+		$bd = new BdSQL;
+		$seleciona = "SELECT *
+					    FROM Reserva
+					   WHERE idSala = '$this->idSala'
+					     AND horaInicio = '$this->horaInicio'
+						 $idReserva";
+		$resultado = $bd->consulta($seleciona);
+		if(count($resultado)==1){
+			foreach( $resultado[0] as $chave=>$valor ){
+				if(!is_int($chave)){
+					$this->$chave = $valor;
+				}
+			}
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 	public function selecionaPorUsuario( $idReserva = NULL ){
 		if(isset($idReserva)){
 			$idReserva = "AND idReserva != '$this->idReserva'";
@@ -142,7 +165,8 @@ class Reserva{
 		$seleciona = "SELECT *
 					    FROM Reserva
 					   WHERE idUsuario = '$this->idUsuario'
-					     AND horaInicio = '$this->horaInicio'";
+						 AND horaInicio = '$this->horaInicio'
+						 $idReserva";
 		$resultado = $bd->consulta($seleciona);
 		if(count($resultado)==1){
 			foreach( $resultado[0] as $chave=>$valor ){

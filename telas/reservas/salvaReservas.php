@@ -35,6 +35,12 @@ if($reserva->selecionaPorUsuario( )){
     exit();
 }
 
+//Verifica se sala já reservada por outro usuário
+if($reserva->selecionaPorSala( )){
+    echo exibeAlerta("Sala já reservada em $data das " . exibeId($hora,2) . " às " . exibeId($hora+1,2) . "!\\nFavor informe outro horário ou outra sala.", "voltar");
+    exit();
+}
+
 $insere = $reserva->insere();
 if( $insere > 0 ){
     echo exibeAlerta('Cadastro efetuado com sucesso!', URL.'/'.$gets['0']);

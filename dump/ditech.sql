@@ -30,7 +30,7 @@ CREATE TABLE `reserva` (
   `horaFim` datetime NOT NULL,
   `descricao` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idReserva`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `reserva` (
 
 LOCK TABLES `reserva` WRITE;
 /*!40000 ALTER TABLE `reserva` DISABLE KEYS */;
-INSERT INTO `reserva` VALUES (1,1,1,'2017-08-20 08:00:00','2017-08-20 09:00:00','Reunião Administrativa'),(2,1,1,'2017-08-21 16:00:00','2017-08-21 17:00:00','Reunião Conselho'),(3,1,3,'2017-08-21 15:00:00','2017-08-21 16:00:00','Teste Conflito Horário');
+INSERT INTO `reserva` VALUES (1,1,1,'2017-08-20 08:00:00','2017-08-20 09:00:00','Reunião Administrativa'),(2,1,1,'2017-08-21 16:00:00','2017-08-21 17:00:00','Reunião Conselho'),(3,1,3,'2017-08-21 15:00:00','2017-08-21 16:00:00','Teste Conflito Horário'),(4,6,3,'2017-08-21 16:00:00','2017-08-21 17:00:00','Reunião Candidato');
 /*!40000 ALTER TABLE `reserva` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -105,4 +105,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-20 21:20:46
+-- Dump completed on 2017-08-20 21:34:15
