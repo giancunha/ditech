@@ -1,7 +1,3 @@
-#################### Segunda Etapa ####################
-OK - connectar-se na BD teste da ditech
-OK - Com base no diagrama ER, desenvolver uma query que retorne os 10 funcionários que mais tempo permaneceram dentro de um determinado departamento e apresentar o resultado ordenado por dias trabalhados decrescente, exibindo Nome Departamento, Nome Funcionário e dias trabalhados no departamento.
-OK - Inserir query como "etapa2.sql" no repositório da primeira etapa.
-
 #################### Extras ####################
 Reservas - Mascára data
+Salas - Permitir definir hora inicial e hora final de disponibilidade
